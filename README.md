@@ -19,17 +19,25 @@ pip install -r requirements.txt
 After installing the necessary libraries, you can run the script and input any website URL to copy its contents.
 
 ```bash
-python webcopy.py
+python main.py
 ```
 The script will prompt you to enter the URL of the website you want to copy. The content will be saved in a folder named after the domain of the website.
+Or you can use the command line arguments:
+```bash
+python main.py -u https://example.com
+```
+Also you can use the debug mode:
+```bash
+python main.py -u https://example.com -d
+```
 
 ## Example
 ```bash
 Enter the URL of the website: https://example.com
 ```
-This will create a folder named example.com in your current directory, containing the website's HTML and assets in their respective subfolders.
+This will create a folder named example.com in your "copied" directory, containing the website's HTML and assets in their respective subfolders.
 
 ## Requirements
-- Python 3.7+
+- Python 3.8+
 - aiohttp
 - beautifulsoup4
